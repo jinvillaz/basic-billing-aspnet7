@@ -22,7 +22,7 @@ dotnet build BasicBilling.API.csproj
 
 ### Run database
 
-dotnet ef database update
+Update-database
 
 ### Run project
 
