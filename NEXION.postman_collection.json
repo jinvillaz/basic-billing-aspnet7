@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "5ae9842e-3389-4219-a97c-e0dbdf9df688",
+		"name": "NEXION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "637889"
+	},
+	"item": [
+		{
+			"name": "Billing-API",
+			"item": [
+				{
+					"name": "Create billing",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"period\": 202002,\n    \"category\": \"WATER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5174/billing/bills",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5174",
+							"path": [
+								"billing",
+								"bills"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get pending bills by clientId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5174/billing/pending/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5174",
+							"path": [
+								"billing",
+								"pending",
+								"100"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pay bill",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\": 100,\r\n    \"period\": 202001,\r\n    \"category\": \"WATER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5174/billing/pay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5174",
+							"path": [
+								"billing",
+								"pay"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search bills by category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5174/billing/search?category=WATER",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5174",
+							"path": [
+								"billing",
+								"search"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "WATER"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payment History",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5174/billing/payment-history/100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5174",
+							"path": [
+								"billing",
+								"payment-history",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

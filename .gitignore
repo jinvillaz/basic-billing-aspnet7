@@ -1,0 +1,10 @@
+# Ignorar la base de datos SQLite
+*.db
+
+# Ignorar archivos y carpetas generados por el IDE o el sistema
+bin/
+obj/
+.vs/
+.vscode/
+.idea/
+.DS_Store
